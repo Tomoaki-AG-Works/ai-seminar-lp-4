@@ -165,6 +165,12 @@ h1, h2, h3, p {
   font-weight: 800;
 }
 
+.status-pill-closed {
+  background: #ffffff;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+
 .hero-copy {
   transform: rotate(-4deg);
   margin: 46px 0 40px;
@@ -1175,7 +1181,8 @@ h2 {
       <div class="container">
         <div class="hero-eyebrow">
           <span class="hero-kicker">AI SEMINAR VOL.4 — 2026.07.30 THU</span>
-          <span class="status-pill">申込受付中</span>
+          <span class="status-pill">第1部 申込受付中</span>
+          <span class="status-pill status-pill-closed">第2部 満員御礼</span>
         </div>
 
         <div class="hero-copy">
@@ -1183,7 +1190,7 @@ h2 {
         </div>
 
         <p class="hero-lead">
-          座学3回を終え、今回から実践ワーク。レベルと関心で選べる<strong>2部制</strong>（両方参加も歓迎）。講師とファシリテーターがそばにつく、「聞く回」ではなく「手を動かす回」です。
+          座学3回を終え、今回から実践ワーク。レベルと関心で選べる<strong>2部制</strong>で開催（第2部は満員御礼のため、現在は第1部のみお申し込みいただけます）。講師とファシリテーターがそばにつく、「聞く回」ではなく「手を動かす回」です。
         </p>
 
         <div class="hero-illust" aria-hidden="true">
@@ -1240,7 +1247,7 @@ h2 {
           </div>
           <div class="meta-item">
             <span class="meta-label">SEATS</span>
-            <span class="meta-value">第1部 30名 / 第2部 10名</span>
+            <span class="meta-value">第1部 30名 / 第2部 10名（満員御礼）</span>
           </div>
         </div>
       </div>
@@ -1284,7 +1291,7 @@ h2 {
         <div class="sec-head">
           <p class="sec-label">TWO SESSIONS</p>
           <h2>レベルと関心で選べる、<span style="white-space:nowrap;">2部制。</span></h2>
-          <p>第1部のみ・第2部のみ・両方参加、いずれもOK。申込フォームで参加区分を選んでください。</p>
+          <p>第2部は定員に達したため受付を終了しました。現在は第1部のみお申し込みいただけます。</p>
         </div>
         <div class="session-grid">
           <article class="jt-box session-card">
@@ -1371,7 +1378,10 @@ h2 {
               </svg>
             </div>
             <p class="session-no">PART 2 — AI AGENT</p>
-            <span class="session-time">19:45-20:45</span>
+            <div style="display:flex; align-items:center; gap:10px; margin:0 0 18px;">
+              <span class="session-time" style="margin:0;">19:45-20:45</span>
+              <span class="status-pill status-pill-closed">満員御礼</span>
+            </div>
             <h3>AIエージェント回</h3>
             <p class="session-sub">AIに仕事を任せる初体験</p>
             <p>
@@ -1392,7 +1402,7 @@ h2 {
               </li>
               <li>
                 <span class="spec-label">定員</span>
-                <span class="spec-value">10名（少人数制）</span>
+                <span class="spec-value">10名（少人数制）— <strong style="color:#2f8f5b;">満員御礼・受付終了</strong></span>
               </li>
             </ul>
           </article>
@@ -1435,7 +1445,7 @@ h2 {
             </div>
             <p>仕事を任せる一歩へ</p>
             <p class="choose-answer">第2部</p>
-            <p class="choose-note">ノートPC持参・事前準備あり</p>
+            <p class="choose-note" style="color:#8a8f8c !important;">満員御礼・受付終了</p>
           </div>
           <div class="jt-box choose-card">
             <div class="choose-icon" aria-hidden="true">
@@ -1446,8 +1456,8 @@ h2 {
               </svg>
             </div>
             <p>全部見たい</p>
-            <p class="choose-answer">両方参加OK</p>
-            <p class="choose-note">18:30-20:45 通し</p>
+            <p class="choose-answer">両方参加</p>
+            <p class="choose-note" style="color:#8a8f8c !important;">第2部満員のため現在は不可</p>
           </div>
         </div>
       </div>
@@ -1459,7 +1469,7 @@ h2 {
         <div class="sec-head">
           <p class="sec-label">BEFORE YOU APPLY</p>
           <h2>第2部に申し込む前に、<span style="white-space:nowrap;">3つだけ。</span></h2>
-          <p>第2部は「自分のPCでAIエージェントを動かす」回のため、事前のセットアップが必要です。</p>
+          <p>第2部は「自分のPCでAIエージェントを動かす」回のため、事前のセットアップが必要です。<strong style="color:#2f8f5b;">※第2部は定員に達したため、現在は受付を終了しています。</strong></p>
         </div>
         <div class="notice-grid">
           <div class="jt-box notice-card">
@@ -1539,7 +1549,7 @@ h2 {
               </li>
               <li>
                 <span class="detail-label">SEATS</span>
-                <span class="detail-value">第1部 30名 / 第2部 10名</span>
+                <span class="detail-value">第1部 30名 / 第2部 10名（満員御礼）</span>
               </li>
               <li>
                 <span class="detail-label">ORGANIZER</span>
@@ -1560,11 +1570,9 @@ h2 {
             </div>
             <p class="sec-label">ENTRY</p>
             <h2>参加申込</h2>
-            <p>申込フォームからお名前・連絡先と参加区分（第1部のみ / 第2部のみ / 両方参加）を送信してください。</p>
+            <p>申込フォームからお名前・連絡先を送信してください（第2部は満員御礼のため、現在は第1部のみのお申し込みとなります）。</p>
             <ol class="apply-steps">
-              <li>申込フォームで参加区分を選んで送信</li>
-              <li>第2部に申し込んだ方には、事前準備ガイドをメールでお送りします</li>
-              <li>ガイドに沿って前日までにセットアップ（所要30分程度）</li>
+              <li>申込フォームからお名前・連絡先を送信</li>
               <li>当日、会場でお会いしましょう</li>
             </ol>
             <div class="apply-actions">
@@ -1650,7 +1658,7 @@ h2 {
         <p class="sec-label">JOIN US</p>
         <h2>AIとの距離が、<br>この60分で変わります。</h2>
         <p>
-          まず触ってみたい方は第1部へ。AIに仕事を任せる一歩を踏み出したい方は第2部へ。迷ったら、両方どうぞ。第1部・第2部とも席に限りがありますので、お早めにお申し込みください。
+          まず触ってみたい方は第1部へ。第2部は満員御礼のため受付を終了しました。第1部も席に限りがありますので、お早めにお申し込みください。
         </p>
         <div class="cta-actions">
           <a class="button button-white" href="https://docs.google.com/forms/d/e/1FAIpQLSecLzl8vqZcb478aT1-y_O6Zmalv1sUYW1nvedFFqL6EtC6jw/viewform" target="_blank" rel="noopener">申込フォームへ</a>
