@@ -553,6 +553,136 @@ h2 {
   color: var(--green);
 }
 
+/* ───────── prep（第2部 事前準備） ───────── */
+
+.prep-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px 44px;
+  align-items: start;
+}
+
+.prep-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-bottom: 2px solid var(--ink);
+  background: #16211c;
+}
+
+.prep-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.prep-video-cap {
+  padding: 20px 24px 24px;
+}
+
+.prep-video-label {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--green);
+}
+
+.prep-video-title {
+  margin: 0 0 16px;
+  font-family: var(--maru);
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.prep-video-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--line);
+}
+
+.prep-video-link:hover {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.prep-steps {
+  list-style: none;
+  counter-reset: prep;
+  margin: 0;
+  padding: 0;
+}
+
+.prep-steps li {
+  position: relative;
+  counter-increment: prep;
+  margin-bottom: 20px;
+  padding: 0 0 20px 56px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.prep-steps li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.prep-steps li::before {
+  content: "0" counter(prep);
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--green);
+}
+
+.prep-steps h3 {
+  margin: 0 0 7px;
+  font-family: var(--maru);
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.prep-steps p {
+  margin: 0;
+  font-size: 14.5px;
+  color: #45524c;
+}
+
+.prep-steps strong {
+  color: var(--green);
+}
+
+.prep-note {
+  position: relative;
+  z-index: 1;
+  margin: 40px 0 0;
+  padding: 22px 26px;
+  background: #f2f8f5;
+  border-left: 5px solid var(--teal);
+  font-size: 15px;
+  color: #45524c;
+}
+
+.prep-note strong {
+  color: var(--ink);
+}
+
 /* ───────── timetable ───────── */
 
 .timetable {
@@ -1054,6 +1184,7 @@ h2 {
   .session-grid,
   .choose-grid,
   .notice-grid,
+  .prep-layout,
   .entry-layout,
   .past-grid {
     grid-template-columns: 1fr;
@@ -1479,8 +1610,8 @@ h2 {
           </div>
           <div class="jt-box notice-card">
             <span class="notice-no">02</span>
-            <h3>事前準備ガイドを送付</h3>
-            <p>お申し込み後、手順をまとめた<strong>「事前準備ガイド」</strong>をメールでお送りします（所要30分程度）。前日までの準備をお願いします。</p>
+            <h3>手順は動画で公開中</h3>
+            <p>セットアップの手順は<a href="#prep" style="color:#2f8f5b;font-weight:700;">動画にまとめています</a>。実際の作業は10分もかかりません。前日までの準備をお願いします。</p>
           </div>
           <div class="jt-box notice-card">
             <span class="notice-no">03</span>
@@ -1488,6 +1619,51 @@ h2 {
             <p>準備でつまずいた方は、当日<strong>19:30から会場で個別サポート</strong>します。わからないまま当日を迎えても大丈夫です。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="prep">
+      <span class="bg-word" aria-hidden="true">PREP</span>
+      <div class="container">
+        <div class="sec-head">
+          <p class="sec-label">PREPARATION</p>
+          <h2>準備は、<span style="white-space:nowrap;">動画のとおりに。</span></h2>
+          <p>第2部にお申し込みの方へ。当日までに済ませていただきたいセットアップの手順を、画面の操作が見える動画にまとめました。動画は30分ほどありますが、ひとつずつ丁寧に説明しているためで、<strong style="color:#2f8f5b;">実際の作業は10分もかかりません</strong>。</p>
+        </div>
+
+        <div class="prep-layout">
+          <div class="jt-box prep-video">
+            <div class="prep-video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/qK4I8AzP4zE" title="クロードコード インストール手順" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="prep-video-cap">
+              <p class="prep-video-label">MOVIE GUIDE</p>
+              <p class="prep-video-title">クロードコード インストール手順</p>
+              <a class="prep-video-link" href="https://youtu.be/qK4I8AzP4zE" target="_blank" rel="noopener">YouTubeで開く →</a>
+            </div>
+          </div>
+
+          <ol class="prep-steps">
+            <li>
+              <h3>Claude Proプランに加入する</h3>
+              <p>月額20ドル（3,000円前後・為替により変動）。当日使う「Code」は<strong>無料プランでは動きません</strong>。パソコンのブラウザから加入するのがおすすめです。</p>
+            </li>
+            <li>
+              <h3>Git for Windows を入れる</h3>
+              <p><strong>Windowsの方のみ</strong>。設定画面がたくさん出ますが、変更は一切不要です。そのまま「Next」を押し続けてください。</p>
+            </li>
+            <li>
+              <h3>Claude デスクトップアプリを入れる</h3>
+              <p>インストール後、01で作ったアカウントでサインインします。</p>
+            </li>
+            <li>
+              <h3>「Code」タブが開けるか確認する</h3>
+              <p>エラーなく画面が開けば<strong>準備完了</strong>です。ここまでできていれば、当日は手ぶらの気持ちでお越しいただけます。</p>
+            </li>
+          </ol>
+        </div>
+
+        <p class="prep-note">パソコンの前で動画を再生しながら、同じ操作をなぞってください。途中で止めながらで大丈夫です。<strong>前日7月29日（水）まで</strong>にお済ませのうえ、ご来場ください。うまくいかなかった方は、そのままの状態でお越しいただければ、当日<strong>19:30から会場で個別サポート</strong>します。</p>
       </div>
     </section>
 
